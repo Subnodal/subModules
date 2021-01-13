@@ -20,10 +20,11 @@ for a basic example of how to use subModules.
 You can get a minified copy of subModules on the [releases page](https://github.com/Subnodal/subModules/releases).
 
 ### Importing subModules and your scripts
-Your HTML code must include the following import:
+Your HTML code must include the following import (you can also host the
+`submodules.min.js` file yourself):
 
 ```html
-<script src="path/to/submodules.js"></script>
+<script src="https://cdn.subnodal.com/lib/submodules.min.js"></script>
 ```
 
 That way, subModules can then be used in your JS code. Ensure that your JS code
@@ -64,3 +65,27 @@ namespace("com.example.namespaceid", function(exports) {
 You can then use `require` to use namespaces in non-namespaced areas, such as in
 your main code (so long as the main code is run after the namespaces have been
 initialised).
+
+## Want to use subModules easily on the web?
+We suggest bundling your libraries with
+[subPack](https://github.com/Subnodal/subPack). That way it's much easier for
+others to import and use your subModules library. Instead of having to write
+this:
+
+```html
+<script src="path/to/submodules.js"></script>
+<script src="path/to/mymodule.js"></script>
+<script src="path/to/somemoduleofmymodule.js"></script>
+<script src="path/to/anothermymodulemodule.js"></script>
+```
+
+...They just need to import one file:
+
+```html
+<script src="path/to/mymodule.min.js"></script>
+```
+
+The bundled and minified file is much easier to import and much more portable,
+and is very lightweight (so your pages load _much_ quicker). For most bundled
+libraries (unless disabled) you don't even need to import `submodules.js` to use
+a subModules-based library since `submodules.js` is automatically bundled too!
