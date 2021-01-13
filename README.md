@@ -37,7 +37,7 @@ code for initialising your project **after** importing your namespaced code.
 ### Writing namespaces
 Namespaces are written like this:
 
-```js
+```javascript
 // The namespace identifier is defined in reverse domain name notation
 namespace("com.example.namespaceid", function(exports) {
     // This variable will be kept private to this namespace
