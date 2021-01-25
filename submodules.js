@@ -8,6 +8,10 @@
 */
 
 (function(global) {
+    if (global.SUBMODULES_VERSION) {
+        return;
+    }
+
     global.SUBMODULES_VERSION = "1.0.0";
     global.SUBMODULES_VERNUM = 0;
 
